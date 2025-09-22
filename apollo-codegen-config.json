@@ -1,0 +1,44 @@
+{
+  "schemaNamespace": "GraphQLPracticeAPI",
+  "input": {
+    "operationSearchPaths": [
+      "**/*.graphql"
+    ],
+    "schemaSearchPaths": [
+      "**/*.graphqls"
+    ]
+  },
+  "output": {
+    "testMocks": {
+      "none": {}
+    },
+    "schemaTypes": {
+      "path": "./GraphQLPracticeAPI",
+      "moduleType": {
+        "embeddedInTarget": {
+          "name": "GraphQLPractice"
+        }
+      }
+    },
+    "operations": {
+      "inSchemaModule": {}
+    }
+  },
+  "schemaDownload": {
+    "downloadMethod": {
+      "introspection": {
+        "endpointURL": "http://localhost:3000/graphql",
+        "httpMethod": {
+          "POST": {}
+        },
+        "outputFormat": "SDL",
+        "includeDeprecatedInputValues": false,
+        "httpHeaders": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    "downloadTimeout": 60,
+    "outputPath": "./schema.graphqls"
+  }
+}
